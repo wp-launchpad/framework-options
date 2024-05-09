@@ -7,8 +7,10 @@ use LaunchpadCore\Plugin;
 use LaunchpadDispatcher\Dispatcher;
 use LaunchpadFrameworkOptions\Tests\Integration\TestCase;
 use LaunchpadOptions\Interfaces\OptionsInterface;
+use LaunchpadOptions\Interfaces\SettingsInterface;
 use LaunchpadOptions\Interfaces\TransientsInterface;
 use LaunchpadOptions\Options;
+use LaunchpadOptions\Settings;
 use LaunchpadOptions\Transients;
 use League\Container\Container;
 
@@ -36,5 +38,6 @@ class ServiceProvider extends TestCase
 
         $this->assertInstanceOf(Options::class, $container->get(OptionsInterface::class));
         $this->assertInstanceOf(Transients::class, $container->get(TransientsInterface::class));
+        $this->assertInstanceOf(Settings::class, $container->get(SettingsInterface::class));
     }
 }
