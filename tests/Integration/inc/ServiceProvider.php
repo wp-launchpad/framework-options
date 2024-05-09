@@ -33,11 +33,14 @@ class ServiceProvider extends TestCase
             'prefix' => $prefix,
             'version' => '3.16'
         ], [
-            \LaunchpadFrameworkOptions\ServiceProvider::class
+            \LaunchpadFrameworkOptions\ServiceProvider::class,
+            \LaunchpadFrameworkOptions\Tests\Integration\inc\files\ServiceProvider::class,
         ]);
 
         $this->assertInstanceOf(Options::class, $container->get(OptionsInterface::class));
         $this->assertInstanceOf(Transients::class, $container->get(TransientsInterface::class));
         $this->assertInstanceOf(Settings::class, $container->get(SettingsInterface::class));
+
+        do_action('test');
     }
 }
