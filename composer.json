@@ -17,6 +17,7 @@
     "wp-launchpad/core": "^0.2.4"
   },
   "require-dev": {
-    "wp-media/phpunit": "^3.0"
+    "wp-media/phpunit": "^3.0",
+    "wp-launchpad/phpunit-wp-hooks": "^1.0"
   }
 }

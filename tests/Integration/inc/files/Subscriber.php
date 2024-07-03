@@ -22,4 +22,12 @@ class Subscriber implements OptionsAwareInterface, TransientsAwareInterface, Set
         $this->transients->get('test', false);
         $this->settings->get('test', false);
     }
+
+    /**
+     * @hook test_filter
+     */
+    public function filter_callback()
+    {
+        return $this->settings->get('test_value', false);
+    }
 }
