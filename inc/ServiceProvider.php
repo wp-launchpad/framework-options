@@ -42,7 +42,7 @@ class ServiceProvider extends AbstractServiceProvider implements HasInflectorInt
             ->set_concrete(Settings::class)
             ->set_definition(function (DefinitionInterface $definition) {
             $prefix = $this->container->get('prefix');
-            $definition->addArguments([OptionsInterface::class, "{$prefix}_settings"]);
+            $definition->addArguments([OptionsInterface::class, "{$prefix}settings"]);
         });
     }
 

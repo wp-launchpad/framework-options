@@ -42,5 +42,15 @@ class ServiceProvider extends TestCase
         $this->assertInstanceOf(Settings::class, $container->get(SettingsInterface::class));
 
         do_action('test');
+
+        $this->assertSame(42, apply_filters('test_filter', false));
+    }
+
+    /**
+     * @hook pre_get_prefix_settings_test_value
+     */
+    public function mock_setting()
+    {
+        return 42;
     }
 }
