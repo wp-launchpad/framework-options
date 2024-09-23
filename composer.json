@@ -14,7 +14,7 @@
   "require": {
     "php": ">=7.0",
     "wp-launchpad/options": "^0.0.2",
-    "wp-launchpad/core": "^0.2.4"
+    "wp-launchpad/core": "^0.3"
   },
   "require-dev": {
     "wp-media/phpunit": "^3.0"
