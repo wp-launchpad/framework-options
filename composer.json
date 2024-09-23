@@ -13,10 +13,11 @@
   },
   "require": {
     "php": ">=7.0",
-    "wp-launchpad/options": "^0.0.2",
+    "wp-launchpad/options": "^0.1",
     "wp-launchpad/core": "^0.3"
   },
   "require-dev": {
-    "wp-media/phpunit": "^3.0"
+    "wp-media/phpunit": "^3.0",
+    "wp-launchpad/phpunit-wp-hooks": "^1.0"
   }
 }
